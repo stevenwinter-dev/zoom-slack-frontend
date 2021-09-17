@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import styles from '../styles/Login.module.css'
 
-const login = () => {
+const Login = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -42,4 +42,4 @@ const login = () => {
     
 }
 
-export default login
+export default Login

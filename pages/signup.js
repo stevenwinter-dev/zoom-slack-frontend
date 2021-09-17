@@ -1,7 +1,7 @@
 import styles from '../styles/Signup.module.css'
 import axios from 'axios'
 
-const signup = () => {
+const Signup = () => {
     
     const handleSubmit = (e) => {
         const data = {
@@ -42,4 +42,4 @@ const signup = () => {
     )
 }
 
-export default signup
+export default Signup
