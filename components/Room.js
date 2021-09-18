@@ -38,6 +38,7 @@ import videoChannelStyles from '../styles/VideoChannel.module.css'
         useEffect(() => {
             // socketRef.current = io.connect("http://localhost:3001");
             socketRef.current = io.connect("https://zoom-slack.herokuapp.com");
+            console.log(socketRef.current)
             navigator.mediaDevices.getUserMedia({ video: videoConstraints, audio: true }).then(stream => {
                 userVideo.current.srcObject = stream;
                 socketRef.current.emit("join room", roomID);
