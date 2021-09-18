@@ -100,9 +100,12 @@ const ChatContainer = ({socket, user, channel, userId}) => {
 
     const fetchUserData = async (userId) => {
         // let response = await axios.get(`http://localhost:3001/userInfo/${userId}`)
-        let response = await axios.get(`https://zoom-slack.herokuapp.com/userInfo/${userId}`)
-        setUserInfo(response.data[0])
-        console.log(response.data[0])
+        if (userInfo != null) {
+            let response = await axios.get(`https://zoom-slack.herokuapp.com/userInfo/${userId}`)
+            setUserInfo(response.data[0])
+            console.log(response.data[0])
+        }
+        
     }
 
     useEffect(()=> {
